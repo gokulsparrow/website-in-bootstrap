@@ -1,0 +1,59 @@
+body {
+    background: #ccc;
+}
+
+#Header a:hover {
+    color: #fff;
+}
+
+#bg-img {
+    background: url('../asserts/house.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+
+#About {
+    margin-top: -200px;
+}
+
+#About .fa {
+    color: #fff;
+}
+
+#About span {
+    padding: 10px 20px 10px 20px;
+}
+
+#About hr {
+    border-width: 2px;
+    margin-top: 06px;
+}
+
+#Policys span {
+    padding: 10px 20px 10px 20px;
+}
+
+#Policys hr {
+    border-width: 2px;
+    margin-top: 06px;
+}
+
+
+#Conduct span {
+    padding: 10px 20px 10px 20px;
+}
+
+#Conduct hr {
+    border-width: 2px;
+    margin-top: 06px;
+}
+
+.zoom {
+    transition: transform .2s; 
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(2.5); 
+  }
