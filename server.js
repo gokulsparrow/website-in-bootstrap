@@ -8,27 +8,16 @@ const path = require('path');
 
 const PORT = 8080;
 
-
-// app.set('views', __dirname + '/views');
-// app.set('view engine', 'html');
-
 app.use(express.json());
 app.use(express.urlencoded({
     extended: false
 }));
 
-// const log = function (request, response ,next) {
-// 	console.log(`${new Date()}: ${request.protocol}://${request.get('host')}${request.originalUrl}`);
-// 	console.log(request.body); // make sure JSON middleware is loaded first
-// 	next();
-// }
-// app.use(log);
 
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.post('/name', (request, response, next) => {
 	// send name here
-	console.log(request.body);
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
 		port: 465,
@@ -42,6 +31,7 @@ app.post('/name', (request, response, next) => {
     var textBody = `FROM: ${request.body.name} Occupation: ${request.body.occupation} MESSAGE: ${request.body.message}`;
 	var htmlBody = `<h2>Mail From Contact Form</h2><p>from:${request.body.name}</p><p>message:${request.body.message}</p>
 		<p>occupation:${request.body.occupation}</p>
+		<p>dob:${request.body.dob}</p>
 		<p>mobile:${request.body.mobile}</P>`;
 	var mail = {
 		from: "gokulsparrowking@gmail.com", // sender address
@@ -57,7 +47,7 @@ app.post('/name', (request, response, next) => {
 			response.json({ message: "message not sent: an error occured; check the server's console log" });
 		}
 		else {
-			response.json({ message: `message sent: ${info.messageId}` });
+			response.json({ message: `message sent: sucessfuly` });
 		}
 	});
 });
