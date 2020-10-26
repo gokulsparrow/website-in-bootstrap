@@ -23,8 +23,8 @@ app.post('/name', (request, response, next) => {
 		port: 465,
 		secure: true,
 		auth: {
-			user: "gokulsparrowking", // this should be YOUR GMAIL account
-			pass: "gokulgk007" // this should be your password
+			user: "selvatamilml", // this should be YOUR GMAIL account
+			pass: "mlselvam" // this should be your password
 		}
     });
 
@@ -34,8 +34,8 @@ app.post('/name', (request, response, next) => {
 		<p>dob:${request.body.dob}</p>
 		<p>mobile:${request.body.mobile}</P>`;
 	var mail = {
-		from: "gokulsparrowking@gmail.com", // sender address
-		to: "gokulgk008@gmail.com", // list of receivers (THIS COULD BE A DIFFERENT ADDRESS or ADDRESSES SEPARATED BY COMMAS)
+		from: "selvatamilml@gmail.com", // sender address
+		to: "selvatamilml@gmail.com", // list of receivers (THIS COULD BE A DIFFERENT ADDRESS or ADDRESSES SEPARATED BY COMMAS)
 		subject: "Mail From Contact Form", // Subject line
 		text: textBody,
 		html: htmlBody
