@@ -58,4 +58,4 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(PORT, () => console.log('Server is starting on PORT. ', 5000));
+app.listen(process.env.PORT || 5000);
