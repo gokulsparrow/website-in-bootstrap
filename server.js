@@ -13,7 +13,7 @@ app.use(express.urlencoded({
     extended: false
 }));
 
-
+//data from conduct form
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.post('/name', (request, response, next) => {
