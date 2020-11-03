@@ -263,7 +263,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="card bg-white">
-                            <form action="/name" method="post" onsubmit="return submitEmailForm(this);">
+                            <form action="/name" method="post"  onsubmit="return submitEmailForm(this);">
                                 <div class="card header">
                                     <h4 class="my-4 mx-5">Conduct Me On Below</h4>
                                     <div class="form-group mx-5">
@@ -306,10 +306,6 @@
             </div>
         </div>
         <script>
-            $(document).ready(function() {
-                $(".dropdown-toggle").dropdown();
-            });
-            
             $('form').on('submit', (e) => {
                 e.preventDefault();
 
@@ -330,8 +326,18 @@
                 $.post('/name', data, function() {
                     console.log('server received data');
                 });
-
             });
+
+            // function submitForm() {
+            //     document.getElementById("clearform").reset();
+            // }
+            let btnclear = document.querySelector('button');
+            let inputss = document.querySelectorAll('input');
+
+            btnclear.addEventListener('click', () => {
+                inputss.forEach(input = input.value = '')
+            });
+
         </script> 
     </body>
 </html>
