@@ -1,7 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 
-
+process.env.PWD = process.cwd()
 
 const app = express();
 const path = require('path');
@@ -14,7 +14,8 @@ app.use(express.urlencoded({
 }));
 
 
-app.use(express.static(path.join(__dirname, '/public')));
+//app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(process.env.PWD + '/public'));
 
 app.post('/name', (request, response, next) => {
     const transporter = nodemailer.createTransport({
