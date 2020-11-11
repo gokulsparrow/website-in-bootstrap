@@ -14,7 +14,7 @@ app.use(express.urlencoded({
 //static
 
 //app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static('public'));
+app.use(express.static(__dirname + 'public'));
 
 app.post('/name', (request, response, next) => {
     const transporter = nodemailer.createTransport({
@@ -58,3 +58,5 @@ app.get('/', (req, res) => {
 //port 
 
 app.listen(process.env.PORT || 5000);
+
+//heroku config:set NPM_CONFIG_PRODUCTION=true
