@@ -57,3 +57,45 @@ body {
 .zoom:hover {
     transform: scale(1.05); 
   }
+
+  @keyframes moveToDown {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      80% {
+          opacity:1;
+          transform: translateY(-20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
+  @keyframes moveToLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    80% {
+        opacity:1;
+        transform: translateX(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+  .anim {
+    animation: moveToDown 2s ease-in-out;
+  }
+
+  .navanim {
+      animation: moveToLeft 2s ease-in-out;
+  }
