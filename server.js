@@ -14,7 +14,7 @@ app.use(express.urlencoded({
 
 
 //app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static('public'));
+app.use(express.static('public/'));
 
 app.post('/name', (request, response, next) => {
     const transporter = nodemailer.createTransport({
