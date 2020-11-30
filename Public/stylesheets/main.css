@@ -75,10 +75,10 @@ body {
       }
   }
 
-  @keyframes moveToLeft {
+@keyframes moveToLeft {
     0% {
-      opacity: 0;
-      transform: translateX(-100px);
+        opacity: 0;
+        transform: translateX(-100px);
     }
 
     80% {
@@ -87,15 +87,41 @@ body {
     }
 
     100% {
-      opacity: 1;
-      transform: translateX(0);
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
-  .anim {
-    animation: moveToDown 2s ease-in-out;
-  }
+@keyframes moveToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
 
-  .navanim {
-      animation: moveToLeft 2s ease-in-out;
-  }
+    80% {
+        opacity:1;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.navbtnanim {
+    animation: moveToRight 2s ease-in-out;
+}
+
+.anim {
+animation: moveToDown 2s ease-in-out;
+}
+
+.navanim {
+    animation: moveToLeft 2s ease-in-out;
+}
+
+
+.toright{
+    animation: moveToDown 2s ease-in-out;
+}
