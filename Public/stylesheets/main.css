@@ -125,3 +125,31 @@ animation: moveToDown 2s ease-in-out;
 .toright{
     animation: moveToDown 2s ease-in-out;
 }
+
+.zone {
+    /*padding:30px 50px;*/
+    /*cursor:pointer;*/
+    border-radius:8px;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.zone1 {
+    /*padding:30px 50px;*/
+    /*cursor:pointer;*/
+    border-radius:8px;
+    transition: all 0.3s linear;
+}
+
+.zone1:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 10px 25px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 10px 25px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 10px 25px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 10px 25px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
