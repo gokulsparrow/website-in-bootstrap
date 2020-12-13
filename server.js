@@ -18,7 +18,6 @@ app.post('/name', (request, response, next) => {
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
 		port: 465,
-		secure: true,
 		auth: {
 			user: "selvatamilml", // this should be YOUR GMAIL account
 			pass: "mlselvam" // this should be your password
@@ -41,7 +40,6 @@ app.post('/name', (request, response, next) => {
     transporter.sendMail(mail, function (err, info) {
 		if(err) {
 			console.log(err);
-			response.json({ message: "message not sent: an error occured; check the server's console log" });
 		}
 		else {
 			response.json({ message: `message sent: sucessfuly` });
